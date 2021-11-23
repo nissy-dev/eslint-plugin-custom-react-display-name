@@ -16,7 +16,7 @@ export const ${ruleVarName}: TSESLint.RuleModule<"", []> = {
     docs: {
       description: "",
       recommended: "error",
-      url: "https://github.com/nissy-dev/eslint-plugin-ts-template/blob/main/doc/rules/${ruleId}.md",
+      url: "https://github.com/nissy-dev/eslint-plugin-ts-template/blob/main/docs/rules/${ruleId}.md",
     },
     messages: {},
     type: "suggestion",
@@ -87,10 +87,10 @@ const main = () => {
   const ruleFile = path.resolve(__dirname, `../src/rules/${ruleId}.ts`);
   fs.writeFileSync(ruleFile, ruleTemplate(ruleId, ruleVarName));
 
-  const testFile = path.resolve(__dirname, `../test/rules/${ruleId}.test.ts`);
+  const testFile = path.resolve(__dirname, `../tests/rules/${ruleId}.test.ts`);
   fs.writeFileSync(testFile, testTemplate(ruleId, ruleVarName));
 
-  const docFile = path.resolve(__dirname, `../doc/rules/${ruleId}.md`);
+  const docFile = path.resolve(__dirname, `../docs/rules/${ruleId}.md`);
   fs.writeFileSync(docFile, docTemplate(ruleId));
 };
 

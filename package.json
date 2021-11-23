@@ -25,7 +25,7 @@
   "scripts": {
     "prepare": "git config --local core.hooksPath .githooks",
     "build": "rm -rf dist/** && tsc",
-    "new-rule": "node script/new-rule.mjs",
+    "new-rule": "node scripts/new-rule.mjs",
     "test": "jest",
     "lint": "run-p -l -c --aggregate-output lint:*",
     "lint:tsc": "tsc",
