@@ -1,14 +1,14 @@
-import { displayNameForExportedComponents } from "./rules/display-name-for-exported-components";
+import { exampleRule } from "./rules/example-rule";
 
 export = {
   rules: {
-    ruleName: displayNameForExportedComponents,
+    ruleName: exampleRule,
   },
   configs: {
     all: {
-      plugins: ["custom-react-display-name"],
+      plugins: ["ts-template"],
       rules: {
-        "display-name-for-exported-components": "error",
+        "ts-template/example-rule": "error",
       },
     },
   },
